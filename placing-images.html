@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.wrapper{
+			display:grid;
+			grid-template-columns: repeat(4,1fr);
+			max-width: 992px;
+			border:1px solid red;
+			grid-auto-flow: dense;
+
+		}
+		li{
+			list-style: none;
+			border:1px solid black;
+		}
+		.wrapper li.landscape {
+    		grid-column-end: span 2;
+		}
+		li>img{
+			display:block;
+			object-fit:cover;/* object-fit only works if both height and width is defined*/
+			width:100%;
+			height:100%;
+
+		}
+		.image1{
+			grid-column-start:1;
+			grid-column-end:3;
+		}
+		.image2{
+			
+		}
+		.image3{
+			grid-column-start:3;
+			grid-column-end:5;
+		}
+		.image8{
+			grid-column-start:1;
+			grid-column-end:2;
+			grid-row-start: 2;
+			grid-row-end: 3;
+
+		}
+		.image9{
+			grid-column-start:2;
+			grid-column-end:3;
+			grid-row-start: 2;
+			grid-row-end: 3;
+			
+
+		}
+		.image7{
+			grid-column-end:span 3;
+
+		}
+		.image5{
+			grid-column-end: span 3;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- https://www.freecodecamp.org/news/how-to-create-an-image-gallery-with-css-grid-e0f0fd666a5c/ -->
+	<ul class="wrapper">
+		   <li class="image1"><img src="images/book.jpg" alt="placeholder"></li>
+		   <li class="image2"><img src="images/pasta.jpeg" alt="placeholder"></li>
+		   <li class="image3"><img src="images/plate.png" alt="placeholder"></li>
+		   <li class="landscape"><img src="images/main-image.jpg" alt="placeholder"></li>
+		   <li class="image5"><img src="images/guestReview.jpg" alt="placeholder"></li>
+		   <li><img src="images/main2.jpeg" alt="placeholder"></li>
+		   <li class="landscape"><img src="images/main.jpeg" alt="placeholder"></li>
+		   <li class="image7"><img src="images/guest.jpg" alt="placeholder"></li>
+		   <li class="image8"><img src="images/main.jpg" alt="placeholder"></li>
+		   <li class="image9"><img src="images/pasta.jpg" alt="placeholder"></li>
+		</ul>
+
+</body>
+</html>
